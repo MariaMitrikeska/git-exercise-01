@@ -3,12 +3,26 @@ origin  https://github.com/MariaMitrikeska/git-exercise-01.git (fetch)
 origin  https://github.com/MariaMitrikeska/git-exercise-01.git (push)
 
 $ git push -u origin main
-Enumerating objects: 12, done.
-Counting objects: 100% (12/12), done.
-Writing objects: 100% (12/12), done.
-Total 12 (delta 0), reused 0 (delta 0)
 To https://github.com/MariaMitrikeska/git-exercise-01.git
- * [new branch]      main -> main
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/MariaMitrikeska/git-exercise-01.git'
+
+$ git pull origin main --no-rebase --allow-unrelated-histories
+From https://github.com/MariaMitrikeska/git-exercise-01
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+
+$ git push -u origin main
+Enumerating objects: 38, done.
+Counting objects: 100% (38/38), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (37/37), 3.85 KiB | 3.85 MiB/s, done.
+Total 37 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/MariaMitrikeska/git-exercise-01.git
+   cb702e0..7fcc6c3  main -> main
 branch 'main' set up to track 'origin/main'.
-
-
