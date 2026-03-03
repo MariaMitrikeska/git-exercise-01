@@ -1,0 +1,35 @@
+$ git init
+Reinitialized existing Git repository in /Users/mariamitrikeska/Desktop/kiii/.git/
+
+$ echo "Initial content" > file.txt
+
+$ git add file.txt
+
+$ git commit -m "Initial commit on main"
+[main 08531be] Initial commit on main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+$ git branch feature-branch
+
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+
+$ echo "Feature branch change" >> file.txt
+
+$ git add file.txt
+
+$ git commit -m "Add change on feature branch"
+[feature-branch dbb3221] Add change on feature branch
+ 1 file changed, 1 insertion(+)
+
+$ git checkout main
+Switched to branch 'main'
+
+$ echo "Main branch change" >> file.txt
+
+$ git add file.txt
+
+$ git commit -m "Add change on main branch"
+[main 40f1a35] Add change on main branch
+ 1 file changed, 1 insertion(+)
